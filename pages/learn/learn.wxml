@@ -1,0 +1,14 @@
+<view>learn page:{{content}}</view>
+
+<import src="../template/template"></import>
+<template is="templateLearn" data="{{...templateData}}"/>
+<template is="msgItem" data="{{...item}}"/>
+
+<!-- <view>九九乘法表：</view>
+<view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="i">
+  <view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="j">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+    </view>
+  </view>
+</view> -->

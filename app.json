@@ -3,6 +3,7 @@
     "pages/home/home",
     "pages/shop-cart/shop-cart",
     "pages/my/my",
+    "pages/learn/learn",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -10,12 +11,13 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3482ff",
     "navigationBarTitleText": "盘蛇夺宝",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true
   },
   "tabBar": {
     "color": "#6e6d6b",
     "selectedColor": "#e64340",
-    "borderStyle": "white",
+    "borderStyle": "black",
     "backgroundColor": "#fff",
     "box-shadow": "0 0 6px 0",
     "list": [
