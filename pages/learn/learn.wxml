@@ -1,4 +1,5 @@
 <view>learn page:{{content}}</view>
+<view>time:{{time}}</view>
 
 <import src="../template/template"></import>
 <template is="templateLearn" data="{{...templateData}}"/>
@@ -12,3 +13,6 @@
     </view>
   </view>
 </view> -->
+
+<navigator url='../loadDataTest/loadDataTest'>加载数据列表页面</navigator>
+<navigator url='../loadDataTest1/loadDataTest1'>加载数据列表页面1</navigator>

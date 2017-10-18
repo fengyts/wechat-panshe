@@ -4,6 +4,9 @@
     "pages/shop-cart/shop-cart",
     "pages/my/my",
     "pages/learn/learn",
+    "pages/loadDataTest/loadDataTest",
+    "pages/loadDataTest1/loadDataTest1",
+
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -12,7 +15,8 @@
     "navigationBarBackgroundColor": "#3482ff",
     "navigationBarTitleText": "盘蛇夺宝",
     "navigationBarTextStyle": "white",
-    "enablePullDownRefresh":true
+    "enablePullDownRefresh":true,
+    "onReachBottomDistance":50
   },
   "tabBar": {
     "color": "#6e6d6b",

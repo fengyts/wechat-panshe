@@ -1,4 +1,6 @@
 
+
+var util = require('../../utils/util.js');
 Page({
 
   /**
@@ -12,18 +14,23 @@ Page({
     item: {
       index: 0,
       msg1: 'this is a template',
-      time: '2016-09-15'
-    }
+      time: '2017-09-18'
+    },
+    time: util.formatTime(new Date())
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // var _itemT = this.data.item;
+    // _itemT.time = util.formatTime(new Date());
     this.setData({
-      content: options.content
+      content: options.content,
+      // item:_itemT
+      ['item.time']:'test modify'
     });
-    console.log(options.content);
+    // console.log(options.content);
   },
 
   /**
