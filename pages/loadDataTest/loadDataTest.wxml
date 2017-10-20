@@ -27,3 +27,5 @@ index.wxml
   </view>
 </view> -->
 <view wx:for="{{resData.records}}">{{item}}</view>
+<view class="loading" hidden="{{!loadingMore}}">正在载入更多...</view>  
+<view class="loading complete" hidden="{{!loadingComplete}}">已加载全部</view>  

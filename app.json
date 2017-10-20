@@ -6,7 +6,7 @@
     "pages/learn/learn",
     "pages/loadDataTest/loadDataTest",
     "pages/loadDataTest1/loadDataTest1",
-
+    "pages/table/table",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -14,7 +14,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3482ff",
     "navigationBarTitleText": "盘蛇夺宝",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "whiPagete",
     "enablePullDownRefresh":true,
     "onReachBottomDistance":50
   },

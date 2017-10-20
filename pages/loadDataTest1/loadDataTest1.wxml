@@ -6,6 +6,7 @@
     </view>  
     <view class="search-cancel" bindtap="keywordSearch">搜索</view>  
   </view>  
+    <view class='f-fa'>输入关键字可以搜索哦，<font style="color:red">狂点搜索按钮才有内容</font></view>  
   <view class="search-result">  
     <scroll-view scroll-y="true" bindscrolltolower="searchScrollLower">  
       <view class="result-item" wx:for="{{searchSongList}}" wx:key="unique"  data-data="{{item}}" >  

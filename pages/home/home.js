@@ -7,7 +7,13 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    resData: {},
+    res:{
+      pageNo:1,
+      pageSize:10,
+      records:[1,2,3]
+    }
   },
   //事件处理函数
   bindViewTap: function () {
@@ -16,8 +22,15 @@ Page({
     })
   },
   changeMotto: function () {
+    let _records = this.data.resData.records;
+    if(undefined == _records){
+      _records = [];
+    }
+    let _res = this.data.res;
     this.setData({
-      motto: "哈哈，我变了"
+      resData:_records.concat(_res),
+      motto: _res.records + "哈哈，我变了",
+
     })
   },
   jumpNewPage: function () {

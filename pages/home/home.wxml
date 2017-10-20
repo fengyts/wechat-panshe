@@ -12,5 +12,5 @@
   </view>
   <button bind:tap="changeMotto">点我修改Hello Word</button>
   <button bind:tap='jumpNewPage'>点我跳转页面</button>
-  <navigator url='../learn/learn?content=测试navigator' class='jumpColor'>navigator跳转页面</navigator>
+  <navigator url='../table/table?content=测试navigator' class='jumpColor'>navigator跳转页面</navigator>
 </view>

@@ -11,6 +11,8 @@ Page({
     isFirstLoad: true,   // 用于判断List数组是不是空数组，默认true，空的数组  
     hasMore: false,    // “加载更多” 
     resData: {},     // 业务数据
+    loadingMore: false, //"上拉加载"的变量，默认false，隐藏  
+    loadingComplete: false  //“没有数据”的变量，默认false，隐藏  
   },
 
   /**
@@ -85,13 +87,20 @@ Page({
   },
 
   updateData(data) {
+    let _records = this.data.resData.records;
+    if (undefined == _records) {
+      _records = [];
+    }
+    // console.log(data);
     this.setData({
-      resData: data
+      resData: data,
+      ['resData.records']: _records.concat(data.records)
     });
   },
 
   loadData: function () {
     let that = this;
+
     wx.request({
       url: listUrl,
       data: { userId: 4, pageNo: that.data.pageNum },
@@ -99,13 +108,29 @@ Page({
       dataType: 'json',
       method: 'POST',
       success: function (res) {
-        console.log(res.data.jsonData);
-        if(res.data.jsonData.totalPage > 1){
+        // console.log(res.data.jsonData);
+
+        if (res.data.jsonData.totalPage > 1) {
+          // console.log(that.resData);
           that.setData({
-            hasMore:true
+            hasMore: true,
+            loadingMore: true,
+            // ['resData.records']: that.resData.records.concat(res.data.jsonData.records)
           });
         }
-        that.updateData(res.data.jsonData);
+        if (res.data.jsonData.records.length != 0) {
+          that.updateData(res.data.jsonData);
+          that.setData({
+            loadingMore: true,
+            loadingComplete: true
+          });
+        } else { // 已经全部加载
+          that.setData({
+            loadingMore: false, // 隐藏加载更多
+            hasMore: false,
+          });
+        }
+
       }
 
     })

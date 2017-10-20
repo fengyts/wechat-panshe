@@ -1,1 +1,6 @@
 /* pages/learn/learn.wxss */
+
+.hrefColor {
+  color: blue;
+  font-size: 32rpx;
+}

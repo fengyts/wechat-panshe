@@ -14,5 +14,5 @@
   </view>
 </view> -->
 
-<navigator url='../loadDataTest/loadDataTest'>加载数据列表页面</navigator>
-<navigator url='../loadDataTest1/loadDataTest1'>加载数据列表页面1</navigator>
+<navigator class='hrefColor' url='../loadDataTest/loadDataTest'>加载数据列表页面</navigator>
+<navigator class='hrefColor' url='../loadDataTest1/loadDataTest1'>加载数据列表页面1</navigator>
